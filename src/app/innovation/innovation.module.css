@@ -1,0 +1,181 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.header h1 {
+    font-size: var(--font-h2);
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.coreTech {
+    margin-bottom: 150px;
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.techImage {
+    height: 450px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(10, 132, 255, 0.1) 0%, transparent 80%);
+}
+
+.techGraphic {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.upperTitle {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.techInfo h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+}
+
+.techInfo p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.techFeatures {
+    list-style: none;
+    padding: 0;
+}
+
+.techFeatures li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.techFeatures li::before {
+    content: '⚡';
+    color: var(--primary-blue);
+}
+
+.patentSection {
+    margin-bottom: 100px;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.sectionHeader p {
+    color: var(--text-secondary);
+}
+
+.patentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.patentCard {
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.patentCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+}
+
+.patentIcon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.patentCard h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.patentNum {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+    margin-bottom: 5px;
+}
+
+.patentDate {
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.totalStats {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 60px;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statVal {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary-blue);
+}
+
+.statLabel {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .techGrid {
+        grid-template-columns: 1fr;
+    }
+}

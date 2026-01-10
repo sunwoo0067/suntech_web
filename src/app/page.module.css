@@ -1,0 +1,169 @@
+.container {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 5%;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.title {
+  font-size: var(--font-display-h1);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.brand {
+  color: var(--primary-blue);
+  text-shadow: 0 0 30px rgba(10, 132, 255, 0.4);
+}
+
+.description {
+  font-size: var(--font-body-large);
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.ctas {
+  display: flex;
+  gap: 20px;
+}
+
+.primaryBtn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(10, 132, 255, 0.3);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: white;
+  color: var(--bg-surface);
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 70%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: contain;
+  object-position: right center;
+  pointer-events: none;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--bg-surface) 30%, transparent 100%);
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 5% 5%;
+  background: linear-gradient(180deg, var(--bg-surface) 0%, #111 100%);
+}
+
+.highlightCard {
+  padding: 40px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.highlightCard:hover {
+  transform: translateY(-5px);
+}
+
+.highlightCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--primary-blue);
+}
+
+.highlightCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .imageWrapper {
+    width: 60%;
+    right: -20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    right: 0;
+    margin-top: 50px;
+  }
+
+  .imageOverlay {
+    background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%);
+  }
+
+  .ctas {
+    justify-content: center;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}

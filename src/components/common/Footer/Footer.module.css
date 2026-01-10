@@ -1,0 +1,123 @@
+.footer {
+    background: #050505;
+    border-top: 1px solid var(--glass-border);
+    padding: 100px 0 60px;
+    color: var(--text-secondary);
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    max-width: 250px;
+    line-height: 1.6;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.navGroup h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.navGroup ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.navGroup a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navGroup a:hover {
+    color: var(--primary-blue);
+}
+
+.bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.info p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.copyright {
+    margin-top: 20px;
+    opacity: 0.6;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socialLink {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.socialLink:hover {
+    opacity: 1;
+    color: var(--primary-blue);
+}
+
+@media (max-width: 1024px) {
+    .top {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
