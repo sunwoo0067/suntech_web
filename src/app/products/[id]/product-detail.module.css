@@ -1,0 +1,154 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.backBtn {
+    display: inline-block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.backBtn:hover {
+    color: var(--primary-blue);
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.imageSection {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.productImage {
+    object-fit: contain;
+    padding: 60px;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+}
+
+.infoSection h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.features,
+.specs {
+    margin-bottom: 45px;
+}
+
+.features h3,
+.specs h3 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 15px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.features li::before {
+    content: '✓';
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.specTable {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.specRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.specRow:last-child {
+    border-bottom: none;
+}
+
+.specLabel {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.specValue {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.inquiryBtn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.inquiryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(10, 132, 255, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .infoSection h1 {
+        font-size: 2.5rem;
+    }
+}
