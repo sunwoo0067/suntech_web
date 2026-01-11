@@ -17,17 +17,16 @@ export const products: Product[] = [
     {
         id: "camera-lens-heater",
         category: "Sensor Heater",
-        name: "Camera Lens Heater",
-        description: "ADAS 및 자율주행용 카메라 렌즈의 성에 및 결로를 방지하여 최상의 시야를 확보합니다.",
+        name: "Camera Lens Heater / CMS",
+        description: "고해상도 카메라 모듈 및 CMS(Camera Monitor System)의 렌즈 결로를 방지하여 자율주행 시야를 보호합니다.",
         features: [
-            "초박형 투명 필름 기술 적용",
-            "빠른 발열 속도로 즉각적인 시야 확보",
-            "고투과율 소재로 카메라 성능 간섭 최소화"
+            "투명 필름 기반의 고해상도 유지",
+            "영하 40도에서도 즉각적인 제빙",
+            "초소형 렌즈 맞춤형 설계"
         ],
         specs: [
-            { label: "Oper. Voltage", value: "DC 12V / 24V" },
-            { label: "Transmittance", value: "> 85%" },
-            { label: "Thickness", value: "0.2mm 이하" }
+            { label: "Transmittance", value: "> 90%" },
+            { label: "Power Consumption", value: "Low Watts" }
         ],
         imageUrl: "/products/camera-lens-heater.png"
     },
@@ -35,69 +34,81 @@ export const products: Product[] = [
         id: "lidar-radar-heater",
         category: "Sensor Heater",
         name: "Lidar / Radar Heater",
-        description: "전천후 자율주행을 위한 핵심 부품으로, 라이다 및 레이다 센서 표면의 눈과 얼음을 제거합니다.",
+        description: "전면부 라이다 및 레이다 센서 커버의 눈과 얼음을 제거하여 ADAS 성능을 극대화합니다.",
         features: [
-            "균일한 발열 패턴 설계",
-            "센서 신호 투과성 최적화",
-            "극한 환경에서의 내구성 검증 완료"
+            "신호 투과 방해 없는 금속 그리드리스 설계",
+            "자동차 전면부 충격 내구성 확보",
+            "균일한 표면 온도 정밀 제어"
         ],
         specs: [
-            { label: "Material", value: "Metal Foil / CNT" },
-            { label: "Surface Temp", value: "Max 60°C" },
-            { label: "Application", value: "Lidar, Radar, Ultrasonic" }
+            { label: "Material", value: "CNT Film" },
+            { label: "Durability", value: "IP6KX" }
         ],
         imageUrl: "/products/lidar-radar-heater.png"
     },
     {
+        id: "mirror-heater",
+        category: "Safety Solution",
+        name: "Side/Rear View Mirror Heater",
+        description: "사이드 미러 및 리어 뷰 미러의 습기와성에를 신속하게 제거하여 안전한 차선 변경을 지원합니다.",
+        features: [
+            "거울 전체 면적 균일 가열",
+            "초박형 필름으로 미러 하우징 슬림화",
+            "에너지 효율 25% 향상"
+        ],
+        specs: [
+            { label: "Thickness", value: "0.15mm" },
+            { label: "Heat Speed", value: "< 1 min" }
+        ],
+        imageUrl: "/products/mirror-heater.png"
+    },
+    {
+        id: "door-handle-heater",
+        category: "EV Solution",
+        name: "Door Handle / Charge Port Heater",
+        description: "겨울철 플러시 타입 도어 핸들과 충전 포트의 동결을 방지하여 승하차 및 충전 편의성을 제공합니다.",
+        features: [
+            "결빙 시 강력한 초기 발열 기능",
+            "다양한 도어 메커니즘 맞춤형 설계",
+            "방수/방진 구조 최적화"
+        ],
+        specs: [
+            { label: "Appliation", value: "Flush Handle, Port Door" },
+            { label: "Voltage", value: "DC 12V" }
+        ],
+        imageUrl: "/products/door-handle-heater.png"
+    },
+    {
+        id: "wiper-heater",
+        category: "Safety Solution",
+        name: "Wiper / LDWS Heater",
+        description: "윈드실드 하단 와이퍼 결빙 방지 및 LDWS 카메라 전면 유리의 시야를 확보합니다.",
+        features: [
+            "와이퍼 블레이드 손상 방지",
+            "LDWS 전용 최적 투명 발열 영역",
+            "유리 파손 방지용 소프트 가열 로직"
+        ],
+        specs: [
+            { label: "Area", value: "Windshield Bottom & Top" },
+            { label: "Safety", value: "Overheat Protection" }
+        ],
+        imageUrl: "/products/wiper-heater.png"
+    },
+    {
         id: "ev-battery-heater",
         category: "EV Solution",
-        name: "EV Battery Heater",
-        description: "전기차 배터리의 동작 최적 온도를 유지하여 겨울철 주행 거리 감소를 최소화하고 수명을 연장합니다.",
+        name: "High-Efficiency Battery Heater",
+        description: "전기차 배터리 팩의 온도를 관리하여 겨울철 주행 거리 손실을 막고 충전 속도를 향상시킵니다.",
         features: [
-            "배터리 팩 전체의 균일 가열",
-            "에너지 효율 극대화 설계",
-            "화재 안전을 위한 다중 보호 구조"
+            "배터리 셀 간 편차 없는 균일 가열",
+            "극한 환경 주행 가능 거리 20% 증대",
+            "초경량 소재 적용으로 연비 개선"
         ],
         specs: [
-            { label: "Type", value: "Film / Silicone Pad" },
-            { label: "Heat Density", value: "Customizable" },
-            { label: "Efficiency", value: "> 95%" }
+            { label: "Power", value: "Max 5kW" },
+            { label: "Efficiency", value: "98%" }
         ],
         imageUrl: "/products/ev-battery-heater.png"
-    },
-    {
-        id: "cnt-heating-film",
-        category: "Core Tech",
-        name: "CNT Heating Film",
-        description: "탄소나노튜브 기반의 차세대 발열체로, 금속선이 없어 유연하고 가벼우며 전자파 차폐 효과가 뛰어납니다.",
-        features: [
-            "꿈의 신소재 CNT 활용",
-            "자유로운 곡면 설계 가능",
-            "뛰어난 에너지 효율 및 내구성"
-        ],
-        specs: [
-            { label: "Resistance", value: "Custom Selection" },
-            { label: "Flexibility", value: "Excellent (Bending test pass)" },
-            { label: "Weight", value: "Ultra-lightweight" }
-        ],
-        imageUrl: "/products/cnt-heating-film.png"
-    },
-    {
-        id: "charge-port-heater",
-        category: "EV Solution",
-        name: "Charge Port Heater",
-        description: "혹한기 충전 도어 동결을 방지하여 전기차 충전의 편의성을 보장합니다.",
-        features: [
-            "플러시 타입 도어 완벽 대응",
-            "저전력 고효율 가열",
-            "방수 및 방진 설계 완료"
-        ],
-        specs: [
-            { label: "Voltage", value: "DC 12V" },
-            { label: "Power", value: "10W - 30W" },
-            { label: "Cycle Time", value: "< 2 mins" }
-        ],
-        imageUrl: "/products/charge-port-heater.png"
     }
 ];
 

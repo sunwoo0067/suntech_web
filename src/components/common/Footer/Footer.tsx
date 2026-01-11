@@ -27,7 +27,7 @@ const Footer = () => {
                             <ul>
                                 <li><Link href="/products?category=Sensor+Heater">센서 히터</Link></li>
                                 <li><Link href="/products?category=EV+Solution">EV 솔루션</Link></li>
-                                <li><Link href="/factory">생산 설비</Link></li>
+                                <li><Link href="/showroom">제품 쇼룸</Link></li>
                             </ul>
                         </div>
                         <div className={styles.navGroup}>

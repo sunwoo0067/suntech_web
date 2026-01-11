@@ -1,22 +1,26 @@
 :root {
-  /* Color Palette - Role-based */
-  --primary-blue: #0A84FF;
-  --bg-surface: #050505;
-  --secondary-silver: #A1A1A6;
-  --accent-red: #FF3B30;
-  --text-primary: #FFFFFF;
-  --text-secondary: #86868B;
+  /* Color Palette - Bosch Mobility Inspired (Light Theme) */
+  --primary-blue: #007BC0;
+  --primary-hover: #005A8E;
+  --bg-surface: #FFFFFF;
+  --bg-secondary: #F0F2F5;
+  --text-primary: #191919;
+  --text-secondary: #525F6B;
+  --accent-red: #ED1C24;
+  /* Bosch Red Accent */
+  --border-color: #DDE1E6;
 
   /* Typography Scale */
   --font-display-h1: 4.5rem;
-  --font-h2: 2.5rem;
+  --font-h2: 3rem;
   --font-body-large: 1.25rem;
   --font-caption: 0.875rem;
 
-  /* Effects */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-border-hover: rgba(0, 102, 255, 0.4);
+  /* Effects - Light Theme Optimized */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
   --glass-blur: blur(12px);
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }

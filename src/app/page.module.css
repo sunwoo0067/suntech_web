@@ -4,11 +4,12 @@
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 0 5%;
+  padding: 0 8%;
+  background: radial-gradient(circle at 70% 50%, rgba(10, 132, 255, 0.03) 0%, transparent 60%);
 }
 
 .content {
@@ -26,7 +27,6 @@
 
 .brand {
   color: var(--primary-blue);
-  text-shadow: 0 0 30px rgba(10, 132, 255, 0.4);
 }
 
 .description {
@@ -60,8 +60,8 @@
 
 .secondaryBtn {
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   padding: 16px 36px;
   font-size: 0.95rem;
   font-weight: 700;
@@ -71,23 +71,24 @@
 }
 
 .secondaryBtn:hover {
-  background-color: white;
-  color: var(--bg-surface);
+  background-color: var(--bg-secondary);
+  border-color: var(--primary-blue);
 }
 
 .imageWrapper {
   position: absolute;
   top: 0;
-  right: -10%;
-  width: 70%;
+  right: -5%;
+  width: 65%;
   height: 100%;
   z-index: 1;
 }
 
 .heroImage {
   object-fit: contain;
-  object-position: right center;
+  object-position: center right;
   pointer-events: none;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.05));
 }
 
 .imageOverlay {
@@ -100,31 +101,127 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 5% 5%;
-  background: linear-gradient(180deg, var(--bg-surface) 0%, #111 100%);
+  padding: 8% 5%;
+  background-color: var(--bg-secondary);
 }
 
 .highlightCard {
   padding: 40px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
 }
 
 .highlightCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
 }
 
 .highlightCard h3 {
   font-size: 1.25rem;
   margin-bottom: 15px;
-  color: var(--primary-blue);
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
-.highlightCard p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
+/* New Section Styles */
+.innovationSection {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+}
+
+.innovationBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.innovationBg img {
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.innovationContent {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.innovationContent h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.techDetails {
+  padding: 120px 8%;
+  background: white;
+}
+
+.sectionHeader {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.sectionHeader span {
+  color: var(--primary-blue);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.gridItem {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.gridItem.large {
+  grid-row: span 2;
+  height: 630px;
+}
+
+.gridItem.small {
+  height: 300px;
+}
+
+.itemCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  color: white;
+}
+
+.itemCaption h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 1200px) {

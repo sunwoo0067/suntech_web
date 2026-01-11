@@ -19,13 +19,20 @@ export default function AboutPage() {
                     <span>Global Reach</span>
                     <h2>글로벌 네트워크</h2>
                 </div>
-                <div className={`${styles.mapWrapper} glass-effect`}>
-                    <div className={styles.mapPlaceholder}>
-                        {/* Simple visual representation of global points */}
-                        <div className={styles.mapPoint} style={{ top: '35%', left: '20%' }} data-label="North America"></div>
-                        <div className={styles.mapPoint} style={{ top: '40%', left: '48%' }} data-label="Europe"></div>
-                        <div className={styles.mapPoint} style={{ top: '38%', left: '80%' }} data-label="Asia (HQ)"></div>
-                        <p>20+ Countries | 50+ Partners | 150+ Patents</p>
+                <div className={styles.mapWrapper}>
+                    <div className={styles.mapContainer}>
+                        {/* New York - USA East Coast */}
+                        <div className={styles.mapPoint} style={{ top: '44%', left: '30.5%' }} data-label="New York (R&D)"></div>
+                        {/* Frankfurt - Central Europe */}
+                        <div className={styles.mapPoint} style={{ top: '41.5%', left: '50.5%' }} data-label="Frankfurt (Sales)"></div>
+                        {/* Seoul - South Korea */}
+                        <div className={styles.mapPoint} style={{ top: '43%', left: '79.5%' }} data-label="Seoul (HQ)"></div>
+                        {/* Tokyo - Japan */}
+                        <div className={styles.mapPoint} style={{ top: '44%', left: '83%' }} data-label="Tokyo (Tech Center)"></div>
+
+                        <div className={styles.mapPlaceholder}>
+                            <p>20+ Countries | 50+ Partners | 150+ Patents</p>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -29,10 +29,9 @@ export default function Home() {
         <div className={styles.imageWrapper}>
           <div className={styles.imageOverlay} />
           <Image
-            src="/hero-part.png"
-            alt="Futuristic Automotive Parts"
-            width={800}
-            height={600}
+            src="/main-hero.png"
+            alt="Futuristic Automotive Chassis with Heating Systems"
+            fill
             className={styles.heroImage}
             priority
           />
@@ -52,6 +51,73 @@ export default function Home() {
         <div className={`${styles.highlightCard} reveal reveal-delay-3`}>
           <h3>Zero Defect</h3>
           <p>AI 정밀 검사 시스템 기반의 완벽한 품질 보증 체계</p>
+        </div>
+      </section>
+
+      {/* New Innovation Excellence Section */}
+      <section className={`${styles.innovationSection} reveal`}>
+        <div className={styles.innovationBg}>
+          <Image
+            src="/innovation-bg.png"
+            alt="Innovation Excellence"
+            fill
+          />
+        </div>
+        <div className={styles.innovationContent}>
+          <span>Innovation in Motion</span>
+          <h2>미래 모빌리티의 기준을<br />썬텍이 만듭니다</h2>
+          <p className={styles.description} style={{ color: 'rgba(255,255,255,0.8)' }}>
+            고효율 열관리 시스템부터 정밀 센싱 기술까지, 전기차와 ADAS 시대의 핵심 과제를 해결합니다.
+          </p>
+          <Link href="/innovation" className={styles.primaryBtn} style={{ background: 'white', color: 'black' }}>
+            기술 혁신 더보기
+          </Link>
+        </div>
+      </section>
+
+      {/* New Tech Details Grid Section */}
+      <section className={styles.techDetails}>
+        <div className={styles.sectionHeader}>
+          <span>Our Focus Topics</span>
+          <h2>핵심 기술 포트폴리오</h2>
+        </div>
+        <div className={styles.imageGrid}>
+          <div className={`${styles.gridItem} ${styles.large} reveal`}>
+            <Image
+              src="/innovation-bg.png"
+              alt="Next Gen Mobility"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+            <div className={styles.itemCaption}>
+              <h4>Next-Gen Mobility</h4>
+              <p>SDV 및 자율주행을 위한 통합 열관리 솔루션</p>
+            </div>
+          </div>
+          <div className={`${styles.gridItem} ${styles.small} reveal reveal-delay-1`}>
+            <Image
+              src="/tech-detail-nano.png"
+              alt="Nano Heating Film"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+            <div className={styles.itemCaption}>
+              <h4>Nano Heating Film</h4>
+              <p>초박형 고출력 CNT 히팅 기술</p>
+            </div>
+          </div>
+          <div className={`${styles.gridItem} ${styles.small} reveal reveal-delay-2`}>
+            <Image
+              src="/tech-detail-sensor.png"
+              alt="Smart Sensing"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+            <div className={styles.itemCaption}>
+              <h4>Smart Sensing</h4>
+              <p>극한 환경에서도 정확한 ADAS 정밀 센서</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -14,10 +14,12 @@ interface Hotspot {
 }
 
 const hotspots: Hotspot[] = [
-    { id: 'camera-lens-heater', top: '38%', left: '49%', name: 'Windshield ADAS Camera' },
-    { id: 'lidar-radar-heater', top: '55%', left: '15%', name: 'Front Lidar/Radar' },
-    { id: 'charge-port-heater', top: '48%', left: '55%', name: 'Side Charge Port' },
-    { id: 'ev-battery-heater', top: '65%', left: '60%', name: 'Battery Management System' },
+    { id: 'wiper-heater', top: '35%', left: '45%', name: 'Wiper & LDWS Heater' },
+    { id: 'camera-lens-heater', top: '58%', left: '22%', name: 'Camera Lens Heater / CMS' },
+    { id: 'lidar-radar-heater', top: '68%', left: '18%', name: 'Lidar / Radar Heater' },
+    { id: 'mirror-heater', top: '43%', left: '32%', name: 'Side View Mirror Heater' },
+    { id: 'door-handle-heater', top: '46%', left: '73%', name: 'Door Handle / Charge Port Heater' },
+    { id: 'ev-battery-heater', top: '65%', left: '55%', name: 'High-Efficiency Battery Heater' },
 ];
 
 export default function ShowroomPage() {
@@ -33,14 +35,14 @@ export default function ShowroomPage() {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <h1>Tech Component Showroom</h1>
-                <p>썬텍의 혁신 부품이 장착된 미래 지향적 차량의 내부를 탐험해 보십시오.</p>
+                <h1>Heater Solution Showroom</h1>
+                <p>썬텍의 정밀 발열 기술이 집약된 부위별 히터 솔루션을 확인해 보십시오.</p>
             </header>
 
             <div className={styles.showroomWrapper}>
                 <Image
-                    src="/showroom/base-car.png"
-                    alt="Future Car Blueprint"
+                    src="/showroom/base-car-heaters.png"
+                    alt="Precision Heater Solution Blueprint"
                     fill
                     className={styles.carImage}
                     priority
@@ -52,10 +54,10 @@ export default function ShowroomPage() {
                         className={styles.hotspot}
                         style={{ top: spot.top, left: spot.left }}
                         onClick={() => handleHotspotClick(spot.id)}
-                        title={spot.name}
                     >
                         <div className={styles.pulse} />
                         <div className={styles.dot} />
+                        <span className={styles.label}>{spot.name}</span>
                     </div>
                 ))}
             </div>

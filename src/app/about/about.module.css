@@ -12,9 +12,7 @@
 .visionSection h1 {
     font-size: var(--font-display-h1);
     margin-bottom: 30px;
-    background: linear-gradient(90deg, #fff, var(--primary-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
 }
 
 .lead {
@@ -46,29 +44,38 @@
 }
 
 .mapWrapper {
-    height: 500px;
-    border-radius: 32px;
+    height: 600px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(circle at center, rgba(10, 132, 255, 0.05) 0%, transparent 70%);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
 }
 
-.mapPlaceholder {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.mapContainer {
     position: relative;
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    background-image: url('/about/global-map.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
 }
 
 .mapPlaceholder p {
-    color: var(--text-secondary);
-    font-weight: 600;
-    margin-top: 200px;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-top: auto;
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
 }
 
 .mapPoint {
@@ -103,7 +110,17 @@
 
 .trustCard {
     padding: 50px;
-    border-radius: 24px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.trustCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-blue);
 }
 
 .trustCard h3 {
@@ -142,7 +159,7 @@
     flex-direction: column;
     gap: 40px;
     padding-left: 50px;
-    border-left: 1px solid var(--glass-border);
+    border-left: 2px solid var(--border-color);
     position: relative;
 }
 
