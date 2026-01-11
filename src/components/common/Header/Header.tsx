@@ -1,7 +1,16 @@
+'use client';
+
 import Link from 'next/link';
 import styles from './Header.module.css';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Header = () => {
+    const { locale, setLocale, t } = useLanguage();
+
+    const toggleLanguage = () => {
+        setLocale(locale === 'ko' ? 'en' : 'ko');
+    };
+
     return (
         <header className={`${styles.header} glass-effect`}>
             <div className={styles.container}>
@@ -11,16 +20,21 @@ const Header = () => {
 
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
-                        <li><Link href="/about">회사소개</Link></li>
-                        <li><Link href="/products">제품정보</Link></li>
-                        <li><Link href="/showroom">쇼룸</Link></li>
-                        <li><Link href="/innovation">기술혁신</Link></li>
-                        <li><Link href="/contact">문의하기</Link></li>
+                        <li><Link href="/about">{t.nav.about}</Link></li>
+                        <li><Link href="/products">{t.nav.products}</Link></li>
+                        <li><Link href="/showroom">{t.nav.showroom}</Link></li>
+                        <li><Link href="/innovation">{t.nav.innovation}</Link></li>
+                        <li><Link href="/contact">{t.nav.contact}</Link></li>
                     </ul>
                 </nav>
 
                 <div className={styles.util}>
-                    <button className={styles.langBtn}>EN</button>
+                    <button
+                        className={styles.langBtn}
+                        onClick={toggleLanguage}
+                    >
+                        {locale === 'ko' ? 'EN' : 'KO'}
+                    </button>
                 </div>
             </div>
         </header>

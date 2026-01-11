@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header/Header";
 import Footer from "@/components/common/Footer/Footer";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body className={inter.variable} suppressHydrationWarning>
-        <Header />
-        <main style={{ paddingTop: '80px', minHeight: 'calc(100vh - 80px)' }}>
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main style={{ paddingTop: '80px', minHeight: 'calc(100vh - 80px)' }}>
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
