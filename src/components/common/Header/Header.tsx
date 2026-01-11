@@ -14,6 +14,7 @@ const Header = () => {
                         <li><Link href="/about">회사소개</Link></li>
                         <li><Link href="/products">제품정보</Link></li>
                         <li><Link href="/factory">생산설비</Link></li>
+                        <li><Link href="/showroom">쇼룸</Link></li>
                         <li><Link href="/innovation">기술혁신</Link></li>
                         <li><Link href="/contact">문의하기</Link></li>
                     </ul>
