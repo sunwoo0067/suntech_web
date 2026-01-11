@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className={inter.variable}>
+      <body className={inter.variable} suppressHydrationWarning>
         <Header />
         <main style={{ paddingTop: '80px', minHeight: 'calc(100vh - 80px)' }}>
           {children}
